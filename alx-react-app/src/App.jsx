@@ -1,20 +1,10 @@
-import Header from './components/Header';
-import MainContent from './components/MainContent';
-import Footer from './components/Footer';
-import UserProfile from './components/UserProfile';
-
 function App() {
   return (
-    <>
-      <Header />
-      <MainContent />
-      <UserProfile 
-        name="Alice" 
-        age="25" 
-        bio="Loves hiking and photography" 
-      />
-      <Footer />
-    </>
+    <div className="flex justify-center items-center h-screen bg-gray-100">
+      <h1 className="text-4xl font-bold text-blue-500">
+        Tailwind CSS is working!
+      </h1>
+    </div>
   );
 }
 
