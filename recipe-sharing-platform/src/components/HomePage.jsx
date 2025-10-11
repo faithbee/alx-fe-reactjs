@@ -3,9 +3,8 @@ import { useEffect, useState } from "react";
 const HomePage = () => {
   const [recipes, setRecipes] = useState([]);
 
-  // Load data from JSON file
   useEffect(() => {
-    fetch("/src/data.json")
+    fetch("/data.json")
       .then((response) => response.json())
       .then((data) => setRecipes(data))
       .catch((error) => console.error("Error loading recipes:", error));
@@ -46,3 +45,5 @@ const HomePage = () => {
     </div>
   );
 };
+
+export default HomePage;
