@@ -32,12 +32,14 @@ const HomePage = () => {
                 {recipe.title}
               </h2>
               <p className="text-gray-600 text-sm mb-4">{recipe.summary}</p>
-              <a
-                href="#"
+              import { Link } from "react-router-dom";
+                ...
+                <Link
+                to={`/recipe/${recipe.id}`}
                 className="inline-block text-blue-600 font-medium hover:text-blue-800"
-              >
+                >
                 View Recipe →
-              </a>
+                </Link>
             </div>
           </div>
         ))}
