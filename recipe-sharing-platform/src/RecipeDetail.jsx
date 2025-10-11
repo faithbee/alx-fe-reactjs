@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
 const RecipeDetail = () => {
-  const { id } = useParams(); // Get recipe ID from URL
+  const { id } = useParams();
   const [recipe, setRecipe] = useState(null);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const RecipeDetail = () => {
 
         <p className="text-gray-700 mb-6 text-lg">{recipe.summary}</p>
 
-        {/* Ingredients Section */}
+        {/* Ingredients */}
         <div className="mb-6">
           <h2 className="text-2xl font-semibold text-gray-800 mb-3">
             🧂 Ingredients
@@ -49,7 +49,7 @@ const RecipeDetail = () => {
           </ul>
         </div>
 
-        {/* Instructions Section */}
+        {/* Instructions */}
         <div className="mb-6">
           <h2 className="text-2xl font-semibold text-gray-800 mb-3">
             👩‍🍳 Cooking Instructions
