@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+    "image": "https://via.placeholder.com/300x200"
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+    "image": "https://via.placeholder.com/300x200"
+  },
+  {
+    "id": 3,
+    "title": "Avocado Toast",
+    "summary": "Crispy bread topped with mashed avocado, olive oil, lemon juice, and seasonings.",
+    "image": "https://via.placeholder.com/300x200"
+  },
+  {
+    "id": 4,
+    "title": "Beef Stir Fry",
+    "summary": "Quick and easy stir fry with tender beef strips and colorful vegetables.",
+    "image": "https://via.placeholder.com/300x200"
+  }
+]
