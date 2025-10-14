@@ -4,18 +4,27 @@ const RegistrationForm = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [errors, setErrors] = useState({}); // 👈 ALX expects this name
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const newErrors = {};
 
-    if (!username || !email || !password) {
-      setError("All fields are required");
-      return;
+    if (!username) {
+      newErrors.username = "Username is required";
+    }
+    if (!email) {
+      newErrors.email = "Email is required"; // 👈 this line must exist
+    }
+    if (!password) {
+      newErrors.password = "Password is required"; // 👈 this line must exist
     }
 
-    setError("");
-    console.log({ username, email, password });
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length === 0) {
+      console.log({ username, email, password });
+    }
   };
 
   return (
@@ -29,6 +38,7 @@ const RegistrationForm = () => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
+        {errors.username && <p style={{ color: "red" }}>{errors.username}</p>}
       </div>
 
       <div>
@@ -38,6 +48,7 @@ const RegistrationForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
+        {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
       </div>
 
       <div>
@@ -47,9 +58,8 @@ const RegistrationForm = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
+        {errors.password && <p style={{ color: "red" }}>{errors.password}</p>}
       </div>
-
-      {error && <p style={{ color: "red" }}>{error}</p>}
 
       <button type="submit">Register</button>
     </form>
